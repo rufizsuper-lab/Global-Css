@@ -1,0 +1,267 @@
+@import "variables";
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.el-icon {
+  --color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 1em !important;
+  width: 1em !important;
+  line-height: 1em !important;
+  fill: currentColor;
+  color: var(--color);
+  font-size: 18px !important;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.form-input {
+  height: 88px;
+}
+
+.el-table {
+  font-size: 13px !important;
+  --el-table-current-row-bg-color: #4db2e5a9 !important;
+
+  .selected-row {
+    --el-table-tr-bg-color: #5be4ff;
+  }
+
+  thead {
+    font-size: 12.8px !important;
+    line-height: 16px !important;
+
+    th {
+      font-weight: 500 !important;
+      background-color: #f5f5f5 !important;
+    }
+  }
+
+  &--small {
+    font-size: 14px !important;
+
+    .cell {
+      padding: 2px 8px !important;
+    }
+  }
+
+  .cell {
+    padding: 0 8px !important;
+  }
+
+  .el-table__cell {
+    padding: 4px 0 !important;
+
+    .center {
+      text-align: center;
+    }
+  }
+
+  .el-table__expanded-cell:hover {
+    background-color: white !important;
+  }
+
+  &__body {
+    tr {
+      &:nth-child(odd) {
+        background-color: #ffffff;
+      }
+
+      &:nth-child(even):not(.table-info tr) {
+        background-color: #f9f9f9;
+      }
+    }
+  }
+}
+
+:root {
+  --el-text-color-regular: #121212 !important;
+  --el-text-color-secondary: var(--bs-gray-900) !important;
+}
+
+.dialog-btn {
+  text-align: right;
+}
+
+.disSearch {
+  .el-input__wrapper {
+    background-color: var(--el-disabled-bg-color);
+  }
+}
+
+.el-button {
+  padding: 4px 8px !important;
+}
+
+.btn-text {
+  white-space: nowrap;
+  display: inline-block;
+  font-size: 13.5px !important;
+}
+
+.sub-table {
+  padding-left: 30px;
+}
+
+.p-header {
+  color: var(--bs-gray-700);
+  padding: 12px;
+  font-size: 16px !important;
+}
+
+.el-form-item__label {
+  font-size: 12px !important;
+  color: #495057 !important;
+  padding: 0 1px 0 0 !important;
+  font-weight: 700;
+}
+
+.el-checkbox {
+  --el-checkbox-text-color: #121212 !important;
+}
+
+.el-tabs__item {
+  font-size: 15px !important;
+  padding: 0 14px !important;
+  float: none !important;
+  max-width: 1000px !important;
+}
+
+.el-tabs__nav {
+  float: none !important;
+}
+
+.table-info {
+  border-collapse: separate;
+  border-spacing: 0 1.1vh;
+
+  .td-info-2 {
+    padding-left: 40px;
+    width: 100%;
+  }
+}
+
+.info-table {
+  .td-info-2 {
+    padding-left: 20px;
+    width: auto;
+  }
+}
+
+.td-info-1 {
+  max-width: 270px;
+  overflow: hidden;
+  color: #495057;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fa-filter {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  max-height: 0;
+}
+
+.slide-enter-to,
+.slide-leave-from {
+  max-height: 200px;
+}
+
+.el-form--default.el-form--label-top {
+  .el-form-item {
+    .el-form-item__label {
+      margin-bottom: 4px !important;
+    }
+  }
+}
+
+.edit-btn {
+  padding: 8px 3px !important;
+}
+
+a:not(.no-underline):not(.number-link) {
+  color: #007bff;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: -2px;
+    left: 0;
+    background-color: #007bff;
+    transform-origin: bottom right;
+    transition: transform 0.15s ease-out;
+  }
+
+  &:hover {
+    color: #007bff;
+    font-weight: 600;
+
+    &::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
+
+.el-backtop {
+  --el-backtop-bg-color: var(--el-bg-color-overlay);
+  --el-backtop-text-color: white !important;
+  --el-backtop-hover-bg-color: var(--el-border-color-extra-light);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007bff !important;
+  border-radius: 50%;
+  box-shadow: var(--el-box-shadow-lighter);
+  color: var(--el-backtop-text-color);
+  cursor: pointer;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  z-index: 5;
+}
+
+.badge-danger {
+  color: #fff5f5 !important;
+}
+
+.el-dialog {
+  margin-bottom: 0 !important;
+}

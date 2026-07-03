@@ -1,0 +1,12 @@
+@import "./variables"; 
+
+.el-pagination.is-background .btn-next.is-active,
+.el-pagination.is-background .btn-prev.is-active,
+.el-pagination.is-background .el-pager li.is-active {
+  background-color: $success !important;
+  color: var(--el-color-white);
+}
+
+.el-loading-spinner .path {
+    stroke: $success !important;
+  }
