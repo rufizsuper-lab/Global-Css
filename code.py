@@ -163,6 +163,7 @@ class TaskManager:
     def sort_priority(self):
         self.tasks.sort(key=lambda x: x.priority)
         self.save()
+        print("Отсортировано.")
 
     def statistics(self):
         total = len(self.tasks)
