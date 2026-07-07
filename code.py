@@ -175,8 +175,7 @@ class TaskManager:
 
         print("\nСтатистика")
         print("-" * 25)
-        print(f"Всего задач : {total}")
-        print(f"Активных    : {active}")
+        print(f"Всего задач : {total}") 
 
         if total:
             percent = completed / total * 100
