@@ -173,12 +173,6 @@ class TaskManager:
 
         active = total - completed
 
-        print("\nСтатистика")
-        print("-" * 25)
-        print(f"Всего задач : {total}")
-        print(f"Активных    : {active}")
-        print(f"Выполнено   : {completed}")
-
         if total:
             percent = completed / total * 100
             print(f"Прогресс    : {percent:.1f}%")
