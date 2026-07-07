@@ -172,7 +172,7 @@ class TaskManager:
         )
 
         active = total - completed
-
+        
         print("\nСтатистика")
         print("-" * 25)
         print(f"Всего задач : {total}") 
