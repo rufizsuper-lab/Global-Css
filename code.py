@@ -173,6 +173,8 @@ class TaskManager:
 
         active = total - completed
 
+        kjrknsvl;knl;kln
+
         if total:
             percent = completed / total * 100
             print(f"Прогресс    : {percent:.1f}%")
