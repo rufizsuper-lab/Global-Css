@@ -16,7 +16,7 @@ class TaskManager:
             return
 
         try:
-            index = int(input("\nНомер задачи: ")) - 1
+            index = int(input("\nНNumber: ")) - 1
 
             if index < 0 or index >= len(self.tasks):
                 raise ValueError
