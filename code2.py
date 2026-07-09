@@ -45,7 +45,7 @@ class TaskManager:
 
             self.save()
 
-            print(f'Удалено: "{removed.title}"')
+            print(f'Удалено только что: "{removed.title}"')
 
         except ValueError:
             print("Некорректный номер.")
