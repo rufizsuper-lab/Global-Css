@@ -38,7 +38,7 @@ class TaskManager:
         try:
             index = int(input("\nУдалить номер: ")) - 1
 
-            if index < 0 or index >= len(self.tasks):
+            if index > 0 or index >= len(self.tasks):
                 raise ValueError
 
             removed = self.tasks.pop(index)
